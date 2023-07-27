@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Account</title>
+    <script src="https://kit.fontawesome.com/9eba3f9ed3.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body class="bg-rose-50 min-h-[100vh] justify-between">
+    <header
+        class="flex bg-rose-500 pl-10 py-3 pr-5 text-rose-50 w-full justify-between vertical-center sticky top-0 max-[480px]:px-3">
+        <div class="text-4xl font-bold max-[480px]:text-2xl">MHA's Swift Swap</div>
+        <div class="flex  justify-between dropdown  max-[930px]:ml-auto">
+            <button type="button"
+                class="home flex content-center py-2 hover:bg-rose-600 rounded-full mx-3 focus:bg-rose-50 focus:text-rose-500 focus:outline-none max-[930px]:hidden duration-300"
+                id="home"><i class="fas fa-house self-center mx-[13px]"></i>
+                <span class="mr-[13px] max-[1080px]:hidden">Home</span>
+            </button>
+            <button type="button"
+                class="flex content-center py-2 hover:bg-rose-600 rounded-full mx-3 focus:bg-rose-50 focus:text-rose-500 focus:outline-none max-[930px]:hidden duration-300"
+                id="messages"><i class="fas fa-message self-center mx-[13px]"></i>
+                <span class="mr-[13px] max-[1080px]:hidden">Messages</span>
+            </button>
+            <div class="flex flex-col justify-between">
+
+                <!-- <div class=""> -->
+                <!-- <button type="button" class="flex content-center py-2 hover:bg-rose-600 rounded-full focus:bg-rose-50 focus:text-rose-500" id="dropdownButton"><i class="fas fa-user self-center mx-[13px]"></i></button> -->
+                <button
+                    class="dropdown-toggle dropdownbtn flex content-center py-2 hover:bg-rose-600 rounded-full mx-3 focus:bg-rose-50 focus:text-rose-500 focus:outline-none duration-300"
+                    id="dropdownButton"><i class="fas fa-user self-center mx-[13px] "></i>
+                </button>
+                <div class="dropdown-menu bg-rose-500 rounded hover:bg-rose-500  left-auto right-0 opacity-90"
+                    id="dropdownMenu">
+                    <div class="accountItems text-rose-50 hover:text-rose-50 p-0">
+                        <button class="w-full p-2 text-left focus:outline-none focus:bg-rose-600  hover:bg-rose-600"
+                            type="button" id="profile"><i class="fas fa-circle-user mx-2"></i>My Profile</button>
+                    </div>
+                    <div class="accountItems text-rose-50 hover:text-rose-50 p-0">
+                        <button
+                            class="home w-full p-2 text-left focus:outline-none focus:bg-rose-600  hover:bg-rose-600"
+                            type="button" id="home"><i class="fas fa-house mx-2"></i>Home</button>
+                    </div>
+                    <div class="accountItems text-rose-50 hover:text-rose-50 p-0">
+                        <button class="w-full p-2 text-left focus:outline-none focus:bg-rose-600  hover:bg-rose-600"
+                            type="button" id="message"><i class="fas fa-message mx-2"></i>Messages</button>
+                    </div>
+                    <div class="accountItems text-rose-50 hover:text-rose-50 p-0" id="signoutDiv">
+                        <button class="w-full p-2 text-left focus:outline-none focus:bg-rose-600  hover:bg-rose-600"
+                            type="button" id="signout"><i class="fas fa-arrow-right-from-bracket mx-2"></i>Sign
+                            Out</button>
+                    </div>
+                </div>
+                <!-- </div>  -->
+
+            </div>
+        </div>
+    </header>
+    <main class="min-h-[77.3vh]">
+        <div>
+            <div class="p-2 bg-rose-200 shadow-md shadow-red-300 text-center text-rose-500 text-2xl font-bold">
+                <span>My Ads</span>
+            </div>
+            <div class=" grid grid-cols-1 gap-4 w-[400px] md:grid-cols-2 md:w-[750px] lg:grid-cols-3 lg:w-[1000px] xl:grid-cols-4 xl:w-[1260px] p-4 mx-auto my-10 "
+                id="adList">
+
+            </div>
+            <!-- max-[1115px]:grid-cols-3 max-[1000px]:grid-cols-2 max-[1000px]:p-20 max-[815px]:grid-cols-1 -->
+
+            <div class="p-2 bg-rose-200 shadow-md shadow-red-300 text-center text-rose-500 text-2xl font-bold">
+                <span>Requests</span>
+            </div>
+            <div class=" grid grid-cols-1 gap-4 w-[400px] md:grid-cols-2 md:w-[750px] lg:grid-cols-3 lg:w-[1000px] xl:grid-cols-4 xl:w-[1260px] p-4 mx-auto my-10 "
+                id="request">
+
+            </div>
+
+        </div>
+        <button type="button"
+            class="w-16 h-16 bg-rose-500 rounded-full fixed top-[33rem] right-12 flex justify-center z-40 text-rose-50 shadow-md font-bold text-xl hover:bg-rose-600 active:bg-rose-700"
+            id="newAd"><i class="fas fa-plus self-center"></i></button>
+    </main>
+    <footer class="flex justify-center bg-rose-500 p-3 text-rose-50 w-full ">
+        <span class=" p-2 max-[350px]:text-xs">copyrights &copy; 2023 - <a href="../home/home.html"
+                class="w-fit text-rose-50 hover:text-rose-100 font-semibold">MHA's Swift Swap</a></span>
+    </footer>
+</body>
+<script type="module" src="seller.js"></script>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MHA's Swift Swap</title>
+    <script src="https://kit.fontawesome.com/9eba3f9ed3.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="bg-rose-50 ">
+    <header class=" sticky top-0">
+        <div class="flex bg-rose-500 pl-10 py-3 pr-5 text-rose-50 w-full justify-between vertical-center  max-[480px]:px-3">
+            <div class="text-4xl font-bold max-[480px]:text-2xl">MHA's Swift Swap</div>
+        <div class="flex  justify-between dropdown  max-[930px]:ml-auto">
+            <button type="button" class="flex content-center py-2 hover:bg-rose-600 rounded-full mx-3 focus:bg-rose-50 focus:text-rose-500 focus:outline-none max-[940px]:hidden duration-300" id="messages"><i class="fas fa-message self-center mx-[13px]"></i><span class="mr-[13px] max-[1080px]:hidden">Messages</span></button>
+            <button type="button" class="flex content-center py-2 hover:bg-rose-600 rounded-full mx-3 focus:bg-rose-50 focus:text-rose-500 focus:outline-none max-[940px]:hidden duration-300" id="seller"><i class="fas fa-wallet self-center mx-[13px]"></i><span class="mr-[13px] max-[1080px]:hidden">Seller Account</span></button>
+            <div class="">
+                
+                <!-- <div class=""> -->
+                <!-- <button type="button" class="flex content-center py-2 hover:bg-rose-600 rounded-full focus:bg-rose-50 focus:text-rose-500" id="dropdownButton"><i class="fas fa-user self-center mx-[13px]"></i></button> -->
+                <button class="dropdown-toggle dropdownbtn flex content-center py-2 hover:bg-rose-600 rounded-full mx-3 focus:bg-rose-50 focus:text-rose-500 focus:outline-none duration-300" id="dropdownButton"><i class="fas fa-user self-center mx-[13px] "></i></button>
+                    <div class="dropdown-menu bg-rose-500 rounded hover:bg-rose-500 right-0 left-auto opacity-90" id="dropdownMenu">
+                      <div class="accountItems text-rose-50 hover:text-rose-50 p-0"><button class="w-full p-2 text-left focus:outline-none focus:bg-rose-600  hover:bg-rose-600" type="button" id="profile"><i class="fas fa-circle-user mx-2"></i>My Profile</button></div>
+                      <div class="accountItems text-rose-50 hover:text-rose-50 p-0"><button class="w-full p-2 text-left focus:outline-none focus:bg-rose-600  hover:bg-rose-600" type="button" id="sellers"><i class="fas fa-wallet mx-2"></i>Seller Account</button></div>
+                      <div class="accountItems text-rose-50 hover:text-rose-50 p-0"><button class="w-full p-2 text-left focus:outline-none focus:bg-rose-600  hover:bg-rose-600" type="button" id="message"><i class="fas fa-message mx-2"></i>Messages</button></div>
+                      <div class="accountItems text-rose-50 hover:text-rose-50 p-0" id="signoutDiv"><button class="w-full p-2 text-left focus:outline-none focus:bg-rose-600  hover:bg-rose-600" type="button" id="signout"><i class="fas fa-arrow-right-from-bracket mx-2"></i>Sign Out</button></div>
+                      <div class="accountItems text-rose-50 hover:text-rose-50 p-0" id="signinDiv"><button class="w-full p-2 text-left focus:outline-none focus:bg-rose-600  hover:bg-rose-600" type="button" id="signin"><i class="fas fa-arrow-right-to-bracket mx-2"></i>Sign In</button></div>
+                    </div>
+                  <!-- </div>  -->
+            
+        </div>
+        </div>
+        </div>
+        <nav class="flex bg-rose-200 max-[480px]:flex-col shadow-md shadow-red-300 justify-between sticky top-0">
+            <div class="flex flex-col p-2 justify-between shadow-md shadow-red-300">
+                <button type="button" class="dropdown-toggle flex content-center py-1 text-rose-500 font-semibold hover:text-rose-600 mx-3 focus:text-rose-600 focus:outline-none categories" id="categories"><i class="fas fa-circle-chevron-down self-center mx-[13px]"></i><span class="mr-[13px]" id="catName"></span></button>
+                <div class="dropdown-menu bg-rose-500 rounded hover:bg-rose-500 absolute top-[3rem] w-[224px] opacity-90" id="categorylist">
+                    <div class="categoriesItems text-rose-50 hover:text-rose-50"><button class="w-full p-2 text-left focus:outline-none focus:bg-rose-600  hover:bg-rose-600 pl-4" type="button" id="All">All Categories</button></div>
+                    <div class="categoriesItems text-rose-50 hover:text-rose-50"><button class="w-full p-2 text-left focus:outline-none focus:bg-rose-600  hover:bg-rose-600 pl-4" type="button" id="Mobile">Mobile Phones</button></div>
+                    <div class="categoriesItems text-rose-50 hover:text-rose-50"><button class="w-full p-2 text-left focus:outline-none focus:bg-rose-600  hover:bg-rose-600 pl-4" type="button" id="Vehicles">Vehicles</button></div>
+                    <div class="categoriesItems text-rose-50 hover:text-rose-50"><button class="w-full p-2 text-left focus:outline-none focus:bg-rose-600  hover:bg-rose-600 pl-4" type="button" id="Electronics">Electronics and Home appliances</button></div>
+                    <div class="categoriesItems text-rose-50 hover:text-rose-50"><button class="w-full p-2 text-left focus:outline-none focus:bg-rose-600  hover:bg-rose-600 pl-4" type="button" id="Books">Books</button></div>
+                    <div class="categoriesItems text-rose-50 hover:text-rose-50"><button class="w-full p-2 text-left focus:outline-none focus:bg-rose-600  hover:bg-rose-600 pl-4" type="button" id="Furniture">Furniture</button></div>
+                </div>
+            </div>
+
+            <div class="flex p-2">
+                <input type="search" class="rounded-l-full bg-rose-50 focus:outline-none pl-2 " name="" id="search" placeholder="Search...">
+                <button type="button" id="searchbtn" class="bg-rose-500 text-rose-50 w-10 p-0 rounded-r-full hover:bg-rose-600 active:bg-rose-700 focus:outline-none duration-300"><i class="fas fa-magnifying-glass"></i></button>
+            </div>
+         </nav>
+    </header>
+    <main class="min-h-[80vh]">
+        <div class=""></div>
+        <div class="bg-rose-200 p-2 text-rose-500 font-bold text-lg text-center" id="catTitle"></div>
+
+        <div class=" grid grid-cols-1 gap-4 w-[400px] md:grid-cols-2 md:w-[750px] lg:grid-cols-3 lg:w-[1000px] xl:grid-cols-4 xl:w-[1260px] p-4 mx-auto my-10 " id="adList">
+            
+        </div>
+    </main>
+    <footer class="flex justify-center bg-rose-500 p-3 text-rose-50 w-full">
+        <span class=" p-2 max-[350px]:text-xs">copyrights &copy; 2023 - <a href="../home/home.html" class="w-fit text-rose-50 hover:text-rose-100 font-semibold">MHA's Swift Swap</a></span>
+    </footer>
+</body>
+<script type="module" src="home.js"></script>
+</html>
